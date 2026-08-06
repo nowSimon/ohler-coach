@@ -277,6 +277,32 @@ strong { font-weight: 600; color: inherit; }
 
 .story-text p { margin-bottom: 24px; }
 
+/* ---------- inner pages ---------- */
+
+.page { padding: 96px 0 120px; }
+
+.page-heading {
+  margin: 0 0 48px;
+  font-family: var(--mono);
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 1;
+  letter-spacing: -0.4px;
+  color: var(--black);
+}
+
+.prose { max-width: 720px; }
+.prose h2 {
+  margin: 48px 0 12px;
+  font-family: var(--mono);
+  font-weight: 700;
+  font-size: 19px;
+  letter-spacing: -0.4px;
+  color: var(--black);
+}
+.prose p { margin-bottom: 16px; }
+.prose a { color: var(--black); }
+
 /* ---------- footer ---------- */
 
 .footer {
@@ -289,6 +315,25 @@ strong { font-weight: 600; color: inherit; }
   font-size: 19px;
   letter-spacing: -0.4px;
 }
+
+.footer-inner {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+.footer-links {
+  display: flex;
+  gap: 24px;
+}
+.footer-links a {
+  color: #fff;
+  font-size: 16px;
+  text-decoration: none;
+  opacity: .8;
+}
+.footer-links a:hover { opacity: 1; text-decoration: underline; }
 
 /* ---------- responsive ---------- */
 

@@ -6,9 +6,30 @@ Ported off MailerLite Pages, Aug 2026.
 
 ## Files
 
-- `index.html` — the whole site, one page
-- `styles.css` — all styling
+- `index.html` — the homepage
+- `impressum/index.html` — Impressum, served at `/impressum/`
+- `styles.css` — all styling, shared by every page
 - `assets/` — images
+
+## Adding a subpage
+
+One folder per page, each containing an `index.html`. The folder name is the URL.
+
+```
+newpage/index.html   ->   ohler.coach/newpage/
+```
+
+Copy `impressum/index.html` as the starting point — it already has the header, footer
+and the right paths. From inside a subfolder, everything at the top level is reached
+with `../`:
+
+```html
+<link rel="stylesheet" href="../styles.css">
+<img src="../assets/logo.png">
+<a href="../">back to the homepage</a>
+```
+
+Then add a link to the new page in the footer of every page.
 
 ## Editing
 
