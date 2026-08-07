@@ -173,13 +173,32 @@ strong { font-weight: 600; color: inherit; }
   margin-bottom: 48px;
 }
 
+.logo-band {
+  position: relative;
+  padding: 44px 40px;
+}
+
+.brush {
+  position: absolute;
+  top: 0;
+  left: -24px;
+  width: calc(100% + 48px);
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  overflow: visible;
+}
+
 .logo-row {
+  position: relative;
+  z-index: 1;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 32px;
   flex-wrap: wrap;
 }
+.logo-row img { filter: brightness(0) invert(1); }
 .logo-row a {
   flex: 1 1 0;
   max-width: 192px;
@@ -494,6 +513,7 @@ strong { font-weight: 600; color: inherit; }
   .story-heading { font-size: 32px; margin-bottom: 40px; }
   .rule { margin-bottom: 48px; }
 
+  .logo-band { padding: 36px 24px; }
   .logo-row { justify-content: center; gap: 32px 40px; }
   .logo-row a { flex: 0 0 auto; width: 140px; }
 }

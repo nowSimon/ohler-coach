@@ -65,12 +65,32 @@
     <div class="container">
       <hr class="rule">
       <p class="logos-label">got good work done with</p>
-      <div class="logo-row">
-        <a href="https://www.plugandplaytechcenter.com/"><img src="assets/logo-plugandplay.png" alt="Plug and Play"></a>
-        <a href="https://beans.de/"><img src="assets/logo-beans.png" alt="Beans Entertainment"></a>
-        <a href="https://www.curvelabs.eu/"><img src="assets/logo-curvelabs.png" alt="Curve Labs"></a>
-        <a href="https://www.csl.tv/"><img src="assets/logo-csl.png" alt="Card Sports League"></a>
-        <a href="https://www.1fluss.com/"><img src="assets/logo-1fluss.png" alt="1FLUSS"></a>
+
+      <div class="logo-band">
+        <svg class="brush" viewBox="0 0 1200 240" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+          <defs>
+            <filter id="brushEdge" x="-12%" y="-40%" width="124%" height="180%">
+              <feTurbulence type="fractalNoise" baseFrequency="0.005 0.045" numOctaves="4" seed="11" result="noise"/>
+              <feDisplacementMap in="SourceGraphic" in2="noise" scale="38" xChannelSelector="R" yChannelSelector="G"/>
+            </filter>
+            <filter id="brushEdgeSoft" x="-12%" y="-40%" width="124%" height="180%">
+              <feTurbulence type="fractalNoise" baseFrequency="0.009 0.06" numOctaves="3" seed="4" result="noise2"/>
+              <feDisplacementMap in="SourceGraphic" in2="noise2" scale="26" xChannelSelector="R" yChannelSelector="G"/>
+            </filter>
+          </defs>
+          <g fill="#0e343e">
+            <rect x="34" y="66" width="1132" height="108" rx="54" filter="url(#brushEdgeSoft)" opacity=".55"/>
+            <rect x="26" y="58" width="1148" height="124" rx="62" filter="url(#brushEdge)"/>
+          </g>
+        </svg>
+
+        <div class="logo-row">
+          <a href="https://www.plugandplaytechcenter.com/"><img src="assets/logo-plugandplay.png" alt="Plug and Play"></a>
+          <a href="https://beans.de/"><img src="assets/logo-beans.png" alt="Beans Entertainment"></a>
+          <a href="https://www.curvelabs.eu/"><img src="assets/logo-curvelabs.png" alt="Curve Labs"></a>
+          <a href="https://www.csl.tv/"><img src="assets/logo-csl.png" alt="Card Sports League"></a>
+          <a href="https://www.1fluss.com/"><img src="assets/logo-1fluss.png" alt="1FLUSS"></a>
+        </div>
       </div>
     </div>
   </section>
