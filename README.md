@@ -51,4 +51,18 @@ Push to `main`. GitHub Pages rebuilds automatically within a minute or two.
 
 ## Booking
 
-All CTAs point to https://cal.com/simonohler/hello
+Header and hero CTAs point to https://cal.com/simonohler/hello
+Step 1 in "how we can work together" points to https://cal.com/simonohler/tonic
+
+## Rules
+
+- **`[ TBD ]` placeholders are Simon's to write. Never invent them.** Never carry lorem
+  ipsum in from anywhere — replace it with a visible placeholder.
+- The port is ahead of the MailerLite site, not behind it. Simon pulls unfinished sections
+  down from live while they get finished here. Diff `www.ohler.coach` to catch copy he
+  wrote there, but never delete a section from this repo just because MailerLite no longer
+  shows it.
+- Legal pages carry real details: Jessnerstr. 16, 10247 Berlin · USt-IdNr DE323603657.
+  No phone in the Impressum — email alone satisfies §5 DDG per ECJ C-298/07.
+- Google Fonts loads from Google's servers and is disclosed in the Datenschutz.
+  Self-hosting the fonts would remove that disclosure.
