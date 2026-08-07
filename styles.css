@@ -156,7 +156,10 @@ strong { font-weight: 600; color: inherit; }
 
 /* ---------- client logos ---------- */
 
-.logos { padding-bottom: 96px; }
+.logos {
+  padding-bottom: 96px;
+  overflow: hidden; /* contains the brushstroke's rough edge at the viewport */
+}
 
 .rule {
   border: 0;
@@ -513,9 +516,20 @@ strong { font-weight: 600; color: inherit; }
   .story-heading { font-size: 32px; margin-bottom: 40px; }
   .rule { margin-bottom: 48px; }
 
-  .logo-band { padding: 36px 24px; }
-  .logo-row { justify-content: center; gap: 32px 40px; }
-  .logo-row a { flex: 0 0 auto; width: 140px; }
+  /* Keep the row one stroke tall — wrapping stretched the brush into a blob and
+     dropped the first and last logos off it. Swipe sideways instead. */
+  .logo-band { padding: 30px 20px; }
+  .logo-row {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    overflow-x: auto;
+    gap: 36px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    -webkit-overflow-scrolling: touch;
+  }
+  .logo-row::-webkit-scrollbar { display: none; }
+  .logo-row a { flex: 0 0 auto; width: 118px; }
 }
 
 @media (max-width: 620px) {
