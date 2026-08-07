@@ -56,6 +56,10 @@ Step 1 in "how we can work together" points to https://cal.com/simonohler/tonic
 
 ## Rules
 
+- **Bump the `?v=` number on every `styles.css` link when the CSS changes.** All three
+  pages reference `styles.css?v=N`. Without the bump, browsers serve cached CSS against new
+  HTML and the page looks broken in ways that don't reproduce for anyone else.
+
 - **`[ TBD ]` placeholders are Simon's to write. Never invent them.** Never carry lorem
   ipsum in from anywhere — replace it with a visible placeholder.
 - The port is ahead of the MailerLite site, not behind it. Simon pulls unfinished sections
