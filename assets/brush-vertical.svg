@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 470" preserveAspectRatio="none">
+  <defs>
+    <!-- Displacement is horizontal only: feColorMatrix flattens the green channel to a
+         constant, so the map can push pixels sideways but never up or down. Result is
+         ragged long edges with flat ends, like a loaded brush dragged straight down.
+         viewBox aspect is kept close to the rendered band so the noise isn't squashed. -->
+    <filter id="e" x="-28%" y="-6%" width="156%" height="112%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.06 0.02" numOctaves="4" seed="23" result="n"/>
+      <feColorMatrix in="n" type="matrix"
+                     values="1 0 0 0 0
+                             0 0 0 0 0.5
+                             0 0 0 0 0
+                             0 0 0 0 1" result="nx"/>
+      <feDisplacementMap in="SourceGraphic" in2="nx" scale="24" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <filter id="s" x="-28%" y="-6%" width="156%" height="112%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.1 0.035" numOctaves="3" seed="8" result="n2"/>
+      <feColorMatrix in="n2" type="matrix"
+                     values="1 0 0 0 0
+                             0 0 0 0 0.5
+                             0 0 0 0 0
+                             0 0 0 0 1" result="nx2"/>
+      <feDisplacementMap in="SourceGraphic" in2="nx2" scale="15" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+  </defs>
+  <g fill="#0e343e">
+    <rect x="34" y="14" width="172" height="442" filter="url(#s)" opacity=".5"/>
+    <rect x="24" y="6" width="192" height="458" filter="url(#e)"/>
+  </g>
+</svg>

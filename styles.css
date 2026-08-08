@@ -516,27 +516,42 @@ strong { font-weight: 600; color: inherit; }
   .story-heading { font-size: 32px; margin-bottom: 40px; }
   .rule { margin-bottom: 48px; }
 
-  /* Stack the logos and give each one its own brushstroke, sized to its own box.
-     One wide stroke stretched to a tall band turns into a blob. */
-  .logo-band { padding: 0; }
+  /* One tall vertical brushstroke behind the stacked column. A vertical stroke
+     stretched along its own axis just reads as a longer swipe, so this adapts to any
+     screen height and any number of logos without distorting. */
   .brush { display: none; }
+
+  /* Band is deliberately narrow and tall so the stroke reads as a vertical swipe
+     rather than a painted block, and so the SVG isn't stretched far off its own aspect. */
+  .logo-band {
+    width: 100%;
+    max-width: 250px;
+    margin: 0 auto;
+    padding: 52px 0;
+  }
+  .logo-band::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background: url("assets/brush-vertical.svg") center / 100% 100% no-repeat;
+  }
 
   .logo-row {
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    gap: 6px;
+    gap: 48px;
   }
   .logo-row a {
+    display: block;
     width: 100%;
-    max-width: 320px;
-    padding: 30px 68px;
-    background: url("assets/brush.svg") center / 100% 100% no-repeat;
+    padding: 0 34px;
   }
   .logo-row img {
     width: auto;
     max-width: 100%;
-    max-height: 34px;
+    max-height: 28px;
     object-fit: contain;
     margin: 0 auto;
   }
